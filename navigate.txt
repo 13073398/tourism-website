@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll to Section</title>
+</head>
+<body>
+  <!-- Button to trigger navigation -->
+  <button id="navigateBtn">Go to Section</button>
+
+  <!-- Some content to scroll through -->
+  <div style="height: 800px;"></div>
+
+  <!-- Target section -->
+  <section id="destination" style="height: 200px; background-color: lightcoral;">
+    <h2>This is the Target Section</h2>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Attach an event listener to the button
+    document.getElementById('navigateBtn').addEventListener('click', function() {
+      // Navigate smoothly to the target section
+      const destination = document.getElementById('destination');
+      destination.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+// Select the element you want to apply the class to
+let targetElement = document.querySelector('.your-element-class');
+
+// Get the section you want to track
+let section = document.querySelector('.your-section-class');
+
+// Function to check scroll position and apply the class
+window.addEventListener('scroll', () => {
+  let sectionTop = section.offsetTop; // Top position of the section
+  let sectionHeight = section.offsetHeight; // Height of the section
+  let scrollPosition = window.scrollY; // Current scroll position
+
+  // Add or remove the class based on scroll position
+  if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+    targetElement.classList.add('active');
+  } else {
+    targetElement.classList.remove('active');
+  }
+});
